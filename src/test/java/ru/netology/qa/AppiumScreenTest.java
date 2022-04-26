@@ -41,7 +41,8 @@ class AppiumScreenTest {
         String beginText = screen.textToBeChanged.getText();
         screen.userInput.sendKeys(" ");
         screen.buttonChange.click();
-        assertEquals(beginText, screen.textToBeChanged.getText());
+        String endText = screen.textToBeChanged.getText();
+        assertEquals(beginText, endText);
     }
 
     @Test
